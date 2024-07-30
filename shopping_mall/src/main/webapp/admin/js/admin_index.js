@@ -1,4 +1,5 @@
 const login_btn = document.querySelector("button");
+const sign_up = document.querySelectorAll(".admin_info > li")[0];
 
 
 login_btn.addEventListener("click",(e)=>{
@@ -18,4 +19,10 @@ login_btn.addEventListener("click",(e)=>{
 		section.append(f);
 	}
 });	
+
+
+sign_up.addEventListener("click",()=>{
+	location.href = "./add_master.do";
+})
+
 

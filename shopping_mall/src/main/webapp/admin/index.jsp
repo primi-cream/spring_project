@@ -23,8 +23,8 @@
             <span>
                 <div class="left_div">
                 <ul>
-                <li><input type="text" class="input_text1" placeholder="관리자 아이디를 입력하세요"></li>
-                <li><input type="password" class="input_text1" placeholder="관리자 패스워드를 입력하세요"></li>
+                <li><input type="text" class="input_text1" name="id" placeholder="관리자 아이디를 입력하세요"></li>
+                <li><input type="password" class="input_text1" name="pw" placeholder="관리자 패스워드를 입력하세요"></li>
                 </ul>
                 </div>
                 <div class="right_div">
@@ -46,5 +46,5 @@
         </div>
     </footer>
 </body>
-<script src="./js/admin_index.js"></script>
+<script src="./js/admin_index.js?v=1"></script>
 </html>

@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class adminCotroller {
@@ -19,12 +21,12 @@ public class adminCotroller {
 	}
 	
 	@PostMapping("/admin_main.do")
-	public String admin_main(HttpServletResponse res) throws Exception {
-		this.pw = res.getWriter();
-		this.pw.print("<script>"
-				+ "alert('test')"
-				+ "</script>");
-	//	System.out.println(a.toString());
-		return null;
+	public String admin_main(@RequestParam(required=true) String id,@RequestParam(required=true) String pw,HttpServletResponse res){
+		return "/admin/admin_list";
+	}
+	
+	@GetMapping("/admin/add_master.do")
+	public String add_master() {
+		return "/admin/add_master";
 	}
 }
